@@ -14,7 +14,9 @@ public class Main {
 
        Zoo zoo = new Zoo();
        zoo.init();
-
+       zoo.runAnimals();//byObjectRef
+        System.out.println("");
+       zoo.runAnimalsByInterfaceRef();
     }
 
 

@@ -10,11 +10,11 @@ public class Dog implements Moveable{
 
     @Override
     public void run() {
-        System.out.println("Dog: I'm running!");
+        System.out.println(this.getClass().getSimpleName() + " " +"I'm running!");
     }
 
     @Override
     public void hide() {
-        System.out.println("Dog: I'm hiding!");
+        System.out.println(this.getClass().getSimpleName() + " " +"I'm hiding!");
     }
 }
