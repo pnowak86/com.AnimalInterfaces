@@ -3,6 +3,7 @@ package com.AnimalInterfaces;
 import com.AnimalInterfaces.animals.Dog;
 import com.AnimalInterfaces.animals.Elephant;
 import com.AnimalInterfaces.animals.Snake;
+import com.AnimalInterfaces.interfaces.Audible;
 import com.AnimalInterfaces.interfaces.Moveable;
 
 import javax.tools.Tool;
@@ -16,7 +17,24 @@ public class Zoo {
     private ArrayList<Elephant> elephants = new ArrayList<>();
     private ArrayList<Snake> snakes = new ArrayList<>();
 
-    private ArrayList<Moveable> moveables = new ArrayList();
+    public ArrayList<Moveable> getMoveables() {
+        return moveables;
+    }
+
+    public void setMoveables(ArrayList<Moveable> moveables) {
+        this.moveables = moveables;
+    }
+
+    public ArrayList<Audible> getAudibles() {
+        return audibles;
+    }
+
+    public void setAudibles(ArrayList<Audible> audibles) {
+        this.audibles = audibles;
+    }
+
+    private ArrayList<Moveable> moveables = new ArrayList<>();
+    private ArrayList<Audible> audibles = new ArrayList<>();
 
     public void init() {
 
@@ -33,6 +51,9 @@ public class Zoo {
         moveables.add(elephant);
         moveables.add(snake);
 
+        audibles.add(dog);
+        audibles.add(elephant);
+        audibles.add(snake);
     }
 
     public void runAnimals() {
@@ -49,13 +70,41 @@ public class Zoo {
         for (Snake snake : snakes) {
             snake.run();
         }
-
-
-
     }
-    public void runAnimalsByInterfaceRef(){
-        for(Moveable moveable: moveables)
-        {moveable.run();}
 
+
+    //public void makeNoiseAnimals() {
+
+
+        //for (Dog dog : dogs) {
+       //     dog.makeNoise();
+       // }
+
+       // for (Elephant elephant : elephants) {
+        //    elephant.makeNoise();
+       // }
+
+       // for (Snake snake : snakes) {
+       //     snake.makeNoise();
+       // }
+  //  }
+
+
+    public void runAnimalsByInterfaceRef() {
+        for (Moveable moveable : moveables) {
+            moveable.run();
+        }
+    }
+
+    public void hideAnimalsByInterfaceRef() {
+        for (Moveable moveable : moveables) {
+            moveable.hide();
+        }
+    }
+
+    public void makeNoiseAnimals() {
+        for (Audible audible : audibles) {
+            audible.makeNoise();
+        }
     }
 }

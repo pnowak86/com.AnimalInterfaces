@@ -3,6 +3,7 @@ package com.AnimalInterfaces;
 import com.AnimalInterfaces.animals.Dog;
 import com.AnimalInterfaces.animals.Elephant;
 import com.AnimalInterfaces.animals.Snake;
+import com.AnimalInterfaces.interfaces.Audible;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,18 @@ public class Main {
        zoo.runAnimals();//byObjectRef
         System.out.println("");
        zoo.runAnimalsByInterfaceRef();
+        System.out.println("");
+       zoo.hideAnimalsByInterfaceRef();
+        zoo.makeNoiseAnimals();
+
+
+       Audible someAnimal = zoo.getAudibles().get(0);
+       Dog mydog = (Dog)someAnimal;
+       mydog.run();
+
+        System.out.println(someAnimal.getClass().getCanonicalName());
+
+
     }
 
 

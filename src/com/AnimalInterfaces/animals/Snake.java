@@ -1,11 +1,12 @@
 package com.AnimalInterfaces.animals;
 
+import com.AnimalInterfaces.interfaces.Audible;
 import com.AnimalInterfaces.interfaces.Moveable;
 
 /**
  * Created by RENT on 2017-05-10.
  */
-public class Snake implements Moveable{
+public class Snake implements Moveable, Audible{
 
     @Override
     public void run() {
@@ -18,4 +19,8 @@ public class Snake implements Moveable{
     }
 
 
+    @Override
+    public void makeNoise() {
+        System.out.println("S nake: I'm noisy");
+    }
 }
