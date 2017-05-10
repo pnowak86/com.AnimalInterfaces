@@ -26,6 +26,8 @@ public class Main {
        Audible someAnimal = zoo.getAudibles().get(0);
        Dog mydog = (Dog)someAnimal;
        mydog.run();
+       mydog.hide();
+       mydog.makeNoise();
 
         System.out.println(someAnimal.getClass().getCanonicalName());
 

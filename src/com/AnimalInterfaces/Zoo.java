@@ -90,6 +90,10 @@ public class Zoo {
   //  }
 
 
+    public void doSomething(Audible audible)
+    {
+        audible.makeNoise();
+    }
     public void runAnimalsByInterfaceRef() {
         for (Moveable moveable : moveables) {
             moveable.run();
